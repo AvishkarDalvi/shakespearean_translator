@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banana speak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navigation container">
+        <div class="nav-brand">Say it like Shakespeare!</div>
+    </nav>
+    <div class="pop-up" style="display: none;">
+        <div class="pop-up-inner">
+            <p id="pop-up-message"></p>
+            <button id="pop-up-close">Close</button>
+        </div>
+    </div>
+    <main>
+        <textarea id="txt-input" cols="40" rows="10"
+            placeholder="Enter your sentence in English and we will convert it to that of the Shakespearean era!"></textarea>
+        <div class="container container-center">
+            <button id="btn-translate">Translate</button>
+            <div style="font-size: large; margin: 1rem; color: #E5E7EB;"><strong> The translation will appear here 👇</strong></div>
+        </div>
+
+        <div id="output"></div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">About</div>
+        <p>The language in which Shakespeare wrote is referred to as Early Modern English, a linguistic period that lasted from approximately 1500 to 1750. The language spoken during this period is often referred to as Elizabethan English or Shakespearian English.</p>
+        <p>We all at some point in our life do fancy about speaking in a Shakespearean way.</p>
+        <p>Now you can translate your English sentences to this amazing medieval marvel of a language and have fun!</p>
+    </footer>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>

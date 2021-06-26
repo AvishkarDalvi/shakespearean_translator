@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap');
+:root {
+    --primary-color: #4B5563;
+    --dark-gray: #E5E7EB;
+    --border-curve: 1rem;
+}
+
+* {
+    font-family: 'Cantarell', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* position: relative; */
+}
+
+main {
+    min-height: calc(100vh - 10
+    
+    0px - 105px);
+    position: relative;
+    overflow: hidden;
+}
+
+main::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    background-image: url(shakespeare.png);
+    background-repeat: repeat;
+    background-size: 200px;
+    animation: bganimate 10000s infinite linear;
+}
+
+button {
+    color: var(--dark-gray);
+    background-color: var(--primary-color);
+    outline: 0;
+    cursor: pointer;
+    border-radius: var(--border-curve);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--dark-gray);
+    border-image: initial;
+}
+
+textarea {
+    margin: 4rem auto;
+    padding: 1rem;
+    width: 80%;
+    height: 15vh;
+    display: block;
+    border-radius: var(--border-curve);
+}
+
+#output {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    height: 15vh;
+    width: 80%;
+    border-radius: var(--border-curve);
+    background-color: white;
+}
+
+.navigation {
+    background-color: var(--primary-color);
+    color: var(--dark-gray);
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.navigation .nav-brand {
+    font-weight: bold;
+    font-size: 4.4rem;
+    text-align: center;
+}
+
+.container {
+    padding: 0rem 1rem;
+}
+
+.container-center {
+    max-width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 1rem 0.5rem;
+    text-align: center;
+    color: var(--dark-gray);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    /* position: relative; */
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.pop-up-inner {
+    max-width: 600px;
+    z-index: 100;
+    position: absolute;
+    padding: 20px;
+    border-radius: var(--border-curve);
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #FEF9C3;
+    box-shadow: 4px 6px 13px 3px var(--dark-gray);
+}
+
+.pop-up::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+p {
+    font-weight: bold;
+}
+
+@keyframes bganimate {
+    0% {
+        background-position: 0 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    100% {
+        background-position: -5000% 5000%;
+        transform: rotate(0deg);
+    }
+}
